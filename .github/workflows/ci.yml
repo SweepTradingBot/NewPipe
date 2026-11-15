@@ -31,6 +31,8 @@ on:
 
 jobs:
   build-and-test-jvm:
+    # StreamPort: needs the sibling extractor checkout; only run upstream
+    if: github.repository == 'TeamNewPipe/NewPipe'
     runs-on: ubuntu-latest
 
     permissions:
@@ -64,6 +66,7 @@ jobs:
           path: app/build/outputs/apk/continuous/*.apk
 
   test-android:
+    if: github.repository == 'TeamNewPipe/NewPipe'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     strategy:
