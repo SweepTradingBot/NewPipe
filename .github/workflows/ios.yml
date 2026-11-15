@@ -53,6 +53,13 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      # Linking the Compose Multiplatform release framework runs out of memory with the
+      # project's 2 GB default. User-home gradle.properties overrides the project's one.
+      - name: Raise Gradle memory for Kotlin/Native linking
+        run: |
+          mkdir -p ~/.gradle
+          echo "org.gradle.jvmargs=-Xmx5g -XX:+UseParallelGC --add-opens jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED" >> ~/.gradle/gradle.properties
+
       - name: Cache Kotlin/Native toolchain
         uses: actions/cache@v4
         with:
