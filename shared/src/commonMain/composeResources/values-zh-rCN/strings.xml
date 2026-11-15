@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">返回</string>
-    <string name="title_activity_about">关于 NewPipe</string>
+    <string name="title_activity_about">关于 StreamPort</string>
     <string name="title_licenses">第三方许可</string>
     <string name="tab_about">关于和常见问题</string>
     <string name="tab_licenses">许可证</string>
@@ -14,10 +14,10 @@
     <string name="give_back">回馈</string>
     <string name="website_title">官网</string>
     <string name="website_encouragement">请访问 NewPipe 网站以了解更多信息和新闻。</string>
-    <string name="privacy_policy_title">NewPipe 隐私政策</string>
+    <string name="privacy_policy_title">StreamPort 隐私政策</string>
     <string name="read_privacy_policy">阅读隐私政策</string>
-    <string name="app_license_title">NewPipe 的许可证</string>
-    <string name="app_license">NewPipe 是 Copyleft 的自由软件：您可以随时使用、研究共享和改进它。您可以根据自由软件基金会发布的 GNU 通用公共许可证 GPLv3 或（由您选择的）任何更高版本的许可证重新分发或修改该许可证。</string>
+    <string name="app_license_title">StreamPort 的许可证</string>
+    <string name="app_license">StreamPort 是 Copyleft 的自由软件：您可以随时使用、研究共享和改进它。您可以根据自由软件基金会发布的 GNU 通用公共许可证 GPLv3 或（由您选择的）任何更高版本的许可证重新分发或修改该许可证。</string>
     <string name="read_full_license">阅读许可证</string>
     <string name="faq_title">常见问题</string>
     <string name="faq_description">如果你在使用本应用时遇到问题，请务必查看这些常见问题的答案！</string>
@@ -216,6 +216,6 @@
     <string name="delete_search_history_alert">删除所有搜索历史？</string>
     <string name="search_history_deleted">已删除搜索历史</string>
     <string name="clear_cookie_title">清除 reCAPTCHA cookies</string>
-    <string name="clear_cookie_summary">清除 NewPipe 在你解决 reCAPTCHA 时存储的 cookies</string>
+    <string name="clear_cookie_summary">清除 StreamPort 在你解决 reCAPTCHA 时存储的 cookies</string>
     <string name="recaptcha_cookies_cleared">已清除 reCAPTCHA cookies</string>
 </resources>

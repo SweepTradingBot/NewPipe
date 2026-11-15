@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Wstecz</string>
-    <string name="title_activity_about">O NewPipe</string>
+    <string name="title_activity_about">O StreamPort</string>
     <string name="title_licenses">Licencje innych firm</string>
     <string name="tab_about">O aplikacji i FAQ</string>
     <string name="tab_licenses">Licencje</string>
@@ -14,10 +14,10 @@
     <string name="give_back">Wspomóż</string>
     <string name="website_title">Strona internetowa</string>
     <string name="website_encouragement">Odwiedź stronę NewPipe, aby uzyskać więcej informacji i najnowsze wiadomości.</string>
-    <string name="privacy_policy_title">Polityka prywatności NewPipe</string>
+    <string name="privacy_policy_title">Polityka prywatności StreamPort</string>
     <string name="read_privacy_policy">Przeczytaj politykę prywatności</string>
-    <string name="app_license_title">Licencja NewPipe</string>
-    <string name="app_license">NewPipe jest wolnym i bezpłatnym oprogramowaniem: Możesz używać, udostępniać i ulepszać je do woli. W szczególności możesz je redystrybuować i/lub modyfikować zgodnie z warunkami GNU General Public License, opublikowanej przez Free Software Fundation, w wersji 3 albo (według Twojego wyboru) jakiejkolwiek późniejszej wersji.</string>
+    <string name="app_license_title">Licencja StreamPort</string>
+    <string name="app_license">StreamPort jest wolnym i bezpłatnym oprogramowaniem: Możesz używać, udostępniać i ulepszać je do woli. W szczególności możesz je redystrybuować i/lub modyfikować zgodnie z warunkami GNU General Public License, opublikowanej przez Free Software Fundation, w wersji 3 albo (według Twojego wyboru) jakiejkolwiek późniejszej wersji.</string>
     <string name="read_full_license">Przeczytaj licencję</string>
     <string name="faq_title">Często zadawane pytania</string>
     <string name="faq_description">Jeśli masz problemy podczas korzystania z aplikacji, koniecznie sprawdź odpowiedzi na najczęściej pojawiające się pytania!</string>
@@ -219,6 +219,6 @@
     <string name="delete_search_history_alert">Usunąć całą historię wyszukiwania?</string>
     <string name="search_history_deleted">Usunięto historię wyszukiwania</string>
     <string name="clear_cookie_title">Wyczyść ciasteczka reCAPTCHA</string>
-    <string name="clear_cookie_summary">Usuwa ciasteczka, które NewPipe przechowuje po rozwiązaniu reCAPTCHA</string>
+    <string name="clear_cookie_summary">Usuwa ciasteczka, które StreamPort przechowuje po rozwiązaniu reCAPTCHA</string>
     <string name="recaptcha_cookies_cleared">Ciasteczka reCAPTCHA zostały wyczyszczone</string>
 </resources>

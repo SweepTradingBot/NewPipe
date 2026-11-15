@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Zurück</string>
-    <string name="title_activity_about">Über NewPipe</string>
+    <string name="title_activity_about">Über StreamPort</string>
     <string name="tab_about">Über &amp; FAQ</string>
     <string name="tab_licenses">Lizenzen</string>
     <string name="donation_title">Spenden</string>
@@ -20,11 +20,11 @@
     <string name="give_back">Zurückgeben</string>
     <string name="website_title">Website</string>
     <string name="website_encouragement">Besuche die NewPipe-Website für weitere Informationen und Neuigkeiten.</string>
-    <string name="privacy_policy_title">NewPipes Datenschutzerklärung</string>
+    <string name="privacy_policy_title">StreamPorts Datenschutzerklärung</string>
     <string name="privacy_policy_encouragement">Dem NewPipe-Projekt ist Datenschutz sehr wichtig. Daher sammelt die App keinerlei Daten ohne deine Zustimmung.\nNewPipes Datenschutzerklärung erläutert ausführlich, welche Daten beim Senden eines Absturzberichts übermittelt und gespeichert werden.</string>
     <string name="read_privacy_policy">Datenschutzerklärung lesen</string>
-    <string name="app_license_title">NewPipes Lizenz</string>
-    <string name="app_license">NewPipe ist freie Copyleft-Software: Du kannst sie nach Belieben benutzen, untersuchen, mit anderen teilen und verbessern. Insbesondere kannst du sie unter den von der Free Software Foundation veröffentlichten Bedingungen der GNU General Public License, in der Version 3 der Lizenz oder (nach deiner Wahl) jeder späteren Version, weitergeben und/oder verändern.</string>
+    <string name="app_license_title">StreamPorts Lizenz</string>
+    <string name="app_license">StreamPort ist freie Copyleft-Software: Du kannst sie nach Belieben benutzen, untersuchen, mit anderen teilen und verbessern. Insbesondere kannst du sie unter den von der Free Software Foundation veröffentlichten Bedingungen der GNU General Public License, in der Version 3 der Lizenz oder (nach deiner Wahl) jeder späteren Version, weitergeben und/oder verändern.</string>
     <string name="faq_description">Wenn du Probleme bei der Verwendung der App hast, lies bitte die Antworten auf häufig gestellte Fragen!</string>
     <string name="faq">Auf der Website ansehen</string>
     <string name="settings">Einstellungen</string>
@@ -213,7 +213,7 @@
     <string name="clear_playback_states_summary">Löscht alle Wiedergabepositionen</string>
     <string name="delete_view_history_alert">Gesamten Wiedergabeverlauf löschen?</string>
     <string name="delete_playback_states_alert">Alle Wiedergabepositionen löschen?</string>
-    <string name="clear_cookie_summary">Lösche Cookies, die NewPipe speichert, wenn du ein reCAPTCHA löst</string>
+    <string name="clear_cookie_summary">Lösche Cookies, die StreamPort speichert, wenn du ein reCAPTCHA löst</string>
     <string name="watch_history_states_deleted">Wiedergabepositionen gelöscht</string>
     <string name="clear_search_history_title">Suchverlauf löschen</string>
     <string name="search_history_deleted">Suchverlauf gelöscht</string>

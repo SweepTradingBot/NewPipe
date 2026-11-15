@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">返回</string>
-    <string name="title_activity_about">關於 NewPipe</string>
+    <string name="title_activity_about">關於 StreamPort</string>
     <string name="title_licenses">第三方授權條款</string>
     <string name="license">由 %1$s 以 %2$s 授權</string>
     <string name="tab_about">關於 &amp; 常見問題</string>
@@ -15,11 +15,11 @@
     <string name="give_back">回饋</string>
     <string name="website_title">網站</string>
     <string name="website_encouragement">如欲了解更多有關 NewPipe 的資訊和新聞，請造訪我們的網站。</string>
-    <string name="privacy_policy_title">NewPipe 的隱私政策</string>
+    <string name="privacy_policy_title">StreamPort 的隱私政策</string>
     <string name="privacy_policy_encouragement">NewPipe 專案非常重視您的隱私。因此，未經您同意此程式不會收集任何資料。\nNewPipe 的隱私權政策詳細說明了當您發送錯誤回報時，什麼資料會被傳送及儲存。</string>
     <string name="read_privacy_policy">閱讀隱私政策</string>
-    <string name="app_license_title">NewPipe 的授權條款</string>
-    <string name="app_license">NewPipe 是一個 Copyleft 的自由軟體：您可以隨意使用、研究、分享並改進它。在遵守由自由軟體基金會所發佈的 GNU 通用公共授權條款的狀況下，您可以自由地再散佈及／或修改它；授權條款預設使用第三版，但您也可以選擇更新的版本。</string>
+    <string name="app_license_title">StreamPort 的授權條款</string>
+    <string name="app_license">StreamPort 是一個 Copyleft 的自由軟體：您可以隨意使用、研究、分享並改進它。在遵守由自由軟體基金會所發佈的 GNU 通用公共授權條款的狀況下，您可以自由地再散佈及／或修改它；授權條款預設使用第三版，但您也可以選擇更新的版本。</string>
     <string name="read_full_license">閱讀授權條款</string>
     <string name="faq_title">常見問題</string>
     <string name="faq_description">若您在使用此應用程式時遇到任何問題，請務必先看看常見問題的答案！</string>

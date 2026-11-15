@@ -26,7 +26,7 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = NEWPIPE_APPLICATION_ID_NEW
+            packageName = BRAND_NAME
             packageVersion = NEWPIPE_VERSION_NAME
         }
     }

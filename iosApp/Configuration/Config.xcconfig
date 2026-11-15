@@ -1,7 +1,10 @@
 TEAM_ID=
 
-PRODUCT_NAME=NewPipe
-PRODUCT_BUNDLE_IDENTIFIER=net.newpipe.app.NewPipe$(TEAM_ID)
+PRODUCT_NAME=StreamPort
+PRODUCT_BUNDLE_IDENTIFIER=io.github.streamport.app$(TEAM_ID)
 
 CURRENT_PROJECT_VERSION=1
 MARKETING_VERSION=1.0
+// Link the Kotlin framework built by :shared:embedAndSignAppleFrameworkForXcode
+FRAMEWORK_SEARCH_PATHS=$(inherited) $(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)
+OTHER_LDFLAGS=$(inherited) -framework ComposeApp

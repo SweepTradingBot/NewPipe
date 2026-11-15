@@ -1,0 +1,90 @@
+# StreamPort: build the iOS app on a GitHub-hosted Mac, so no local Mac/Xcode is needed.
+#
+# Produces an UNSIGNED .ipa artifact. Install it on an iPhone from Windows with
+# Sideloadly or AltStore/AltServer, which sign it with your own Apple ID.
+#
+# Expects your extractor fork to be a repo named "NewPipeExtractor" under the same
+# GitHub owner, with a branch matching EXTRACTOR_REF below.
+
+name: iOS build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "streamport/**" ]
+  pull_request:
+
+env:
+  EXTRACTOR_REF: streamport/phase0
+
+jobs:
+  build-ios:
+    runs-on: macos-15
+    timeout-minutes: 90
+    permissions:
+      contents: read
+
+    steps:
+      # settings.gradle.kts uses includeBuild("../NewPipeExtractor"), so both repos
+      # are checked out side by side.
+      - name: Checkout app
+        uses: actions/checkout@v4
+        with:
+          path: NewPipe
+
+      - name: Checkout extractor fork
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/NewPipeExtractor
+          ref: ${{ env.EXTRACTOR_REF }}
+          path: NewPipeExtractor
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Cache Kotlin/Native toolchain
+        uses: actions/cache@v4
+        with:
+          path: ~/.konan
+          key: konan-${{ runner.os }}-${{ hashFiles('NewPipe/gradle/libs.versions.toml', 'NewPipeExtractor/gradle/libs.versions.toml') }}
+
+      - name: Test extractor-kmp on the iOS simulator (JavaScriptCore)
+        working-directory: NewPipeExtractor
+        run: ./gradlew :extractor-kmp:iosSimulatorArm64Test :extractor-kmp:jvmTest --console=plain
+
+      - name: Build iOS app (unsigned)
+        working-directory: NewPipe/iosApp
+        run: |
+          xcodebuild \
+            -project iosApp.xcodeproj \
+            -target iosApp \
+            -configuration Release \
+            -sdk iphoneos \
+            -arch arm64 \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build
+
+      - name: Package .ipa
+        working-directory: NewPipe/iosApp
+        run: |
+          APP=$(find build -type d -name "*.app" -path "*Release-iphoneos*" | head -1)
+          test -n "$APP" || { echo "No .app produced"; exit 1; }
+          mkdir -p ipa/Payload
+          cp -R "$APP" ipa/Payload/
+          (cd ipa && zip -qry ../StreamPort-unsigned.ipa Payload)
+          ls -lh StreamPort-unsigned.ipa
+
+      - name: Upload .ipa
+        uses: actions/upload-artifact@v4
+        with:
+          name: StreamPort-unsigned-ipa
+          path: NewPipe/iosApp/StreamPort-unsigned.ipa
+          if-no-files-found: error

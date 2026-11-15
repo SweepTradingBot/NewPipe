@@ -21,6 +21,7 @@ import androidx.compose.runtime.rememberUpdatedState
 import androidx.core.net.toUri
 import co.touchlab.kermit.Logger
 import java.io.File
+import net.newpipe.app.BuildConfig
 import org.koin.core.annotation.Singleton
 
 @Singleton(binds = [DownloadStorageActions::class])
@@ -112,6 +113,6 @@ class AndroidDownloadStorageActions(context: Context) : DownloadStorageActions {
 
     private companion object {
         const val HOST_CLASS = "org.schabi.newpipe.settings.ComposeDownloadStorage"
-        const val NEWPIPE_FOLDER = "NewPipe"
+        const val NEWPIPE_FOLDER = BuildConfig.APP_NAME
     }
 }

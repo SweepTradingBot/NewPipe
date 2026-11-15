@@ -13,6 +13,11 @@ pluginManagement {
     }
 }
 
+plugins {
+    // Lets Gradle download the JDK versions the toolchains ask for (21 here)
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+}
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -26,13 +31,13 @@ include(":app") // androidApp
 include(":desktopApp")
 include("shared")
 
-// Use a local copy of NewPipe Extractor by uncommenting the lines below.
 // We assume, that NewPipe and NewPipe Extractor have the same parent directory.
 // If this is not the case, please change the path in includeBuild().
 
-//    includeBuild("../NewPipeExtractor") {
-//        dependencySubstitution {
-//            substitute(module("com.github.TeamNewPipe:NewPipeExtractor"))
-//                .using(project(":extractor"))
-//        }
-//    }
+// StreamPort: always build against our fork of the extractor (sibling directory).
+includeBuild("../NewPipeExtractor") {
+    dependencySubstitution {
+        substitute(module("com.github.TeamNewPipe:NewPipeExtractor"))
+            .using(project(":extractor"))
+    }
+}
