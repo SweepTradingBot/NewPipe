@@ -17,6 +17,11 @@ on:
 env:
   EXTRACTOR_REF: streamport/phase0
 
+# A newer push to the same branch cancels the older, now-outdated macOS build
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-ios:
     runs-on: macos-15
